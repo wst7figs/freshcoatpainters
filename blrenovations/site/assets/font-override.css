@@ -303,8 +303,8 @@ html:root {
 
 /* Symmetric header: two links each side of the logo; CTA pinned to the far right */
 @media (min-width: 1025px) {
-  .header__inner { position: relative; column-gap: 48px; }
-  .header__nav--left, .header__nav--right { gap: 40px; }
+  .header__inner { position: relative; column-gap: 30px; }
+  .header__nav--left, .header__nav--right { gap: 26px; }
   .header__nav--right .btn--cta {
     position: absolute;
     right: var(--container-padding, 24px);
@@ -312,22 +312,27 @@ html:root {
     transform: translateY(-50%);
   }
   .header__nav--right .btn--cta:hover { transform: translateY(calc(-50% - 2px)); }
+  /* Equal-width link slots so both sides measure exactly the same, but tighter */
+  .header__nav--left .header__link,
+  .header__nav--right .header__link { min-width: 84px; justify-content: center; }
 }
 #projects { scroll-margin-top: 110px; }
-@media (min-width: 1025px) {
-  /* Equal-width link slots so both sides measure exactly the same */
-  .header__nav--left .header__link,
-  .header__nav--right .header__link { min-width: 104px; justify-content: center; }
+
+/* Bigger, chunkier Free Quote button */
+.btn--cta {
+  padding: 15px 34px !important;
+  font-size: 1rem !important;
+  letter-spacing: .06em !important;
 }
 
 /* Floating WhatsApp button */
 .fc-whatsapp {
   position: fixed;
-  right: 22px;
-  bottom: 22px;
+  right: 24px;
+  bottom: 24px;
   z-index: 9990;
-  width: 60px;
-  height: 60px;
+  width: 72px;
+  height: 72px;
   border-radius: 50%;
   background: #25D366;
   color: #fff;
@@ -337,5 +342,9 @@ html:root {
   box-shadow: 0 6px 20px rgba(0,0,0,.3);
   transition: transform .2s ease, box-shadow .2s ease;
 }
+.fc-whatsapp svg { width: 42px; height: 42px; }
 .fc-whatsapp:hover { transform: scale(1.08); box-shadow: 0 10px 28px rgba(0,0,0,.4); }
-@media (max-width: 640px) { .fc-whatsapp { right: 16px; bottom: 16px; width: 56px; height: 56px; } }
+@media (max-width: 640px) {
+  .fc-whatsapp { right: 16px; bottom: 16px; width: 64px; height: 64px; }
+  .fc-whatsapp svg { width: 38px; height: 38px; }
+}
