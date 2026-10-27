@@ -49,6 +49,7 @@ HERO_POSTER = "assets/hero-painting-poster.jpg"
 SHOWREEL_VIDEO = "assets/showreel-painting.mp4"
 SHOWREEL_POSTER = "assets/showreel-painting-poster.jpg"
 FONTS_URL = ("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800"
+             "&family=Plus+Jakarta+Sans:wght@700;800"
              "&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap")
 PAGE_HERO_IMAGES = {  # page -> stock photo behind the page title
     "about": "painter-white-wall", "services": "roller-white-wall",
